@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin page</title>
+    <link rel="stylesheet" href="scss/admin.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container d-flex">
+      <div class="logoBlog">
+        <div class="logoIcon">
+          <img src="img/Logo.svg" alt="" /><br />
+          <h1 class="logoTitle">Admin</h1>
+        </div>
+        <div class="back">
+          <img src="img/Vector.png" alt="" />
+          <h3>User Page</h3>
+        </div>
+      </div>
+      <div class="contentBlog">
+        <div class="header">
+          <h1 class="contentTitle">Overview</h1>
+          <button class="add">Add</button>
+        </div>
+        <div class="main">
+          <ul id="list">
+            <!-- <li class="item">
+              <div class="image">
+                <img src="img/51KRkOk-JPL._AC_UY218_.jpg.svg" alt="" />
+              </div>
+              <div class="bookContent">
+                <h3 class="booktitle">Yolg'onlar shahri</h3>
+                <h3>
+                  by <span class="bookAuthor">Abdulla Oripov</span>,
+                  <span class="bookCategory">Drama</span>, at al.|
+                  <span class="date">12.10.1999</span>
+                </h3>
+                <div class="rate">
+                  <img
+                    style="width: 25px; height: 25px"
+                    src="img/star.svg/starr.svg"
+                    alt=""
+                  />
+                  <img
+                    style="width: 25px; height: 25px"
+                    src="img/star.svg/starr.svg"
+                    alt=""
+                  />
+                  <img
+                    style="width: 25px; height: 25px"
+                    src="img/star.svg/starr.svg"
+                    alt=""
+                  />
+                  <img
+                    style="width: 25px; height: 25px"
+                    src="img/star.svg/starr.svg"
+                    alt=""
+                  />
+                  <img
+                    style="width: 25px; height: 25px"
+                    src="img/star.svg/starr.svg"
+                    alt=""
+                  />
+                </div>
+                <h3 class="bookPrice">Cost: $24.49</h3>
+                <div class="btnShow">
+                  <div>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="addModal">
+        <h1 style="text-align: center; margin-bottom: 20px; color: green">
+          Add book
+        </h1>
+        <form class="addform">
+          <input type="text" id="bookTitle" placeholder="Book title" /><br />
+          <input type="text" id="author" placeholder="Author" /><br />
+          <select id="category">
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option></select
+          ><br />
+          <input type="number" id="price" placeholder="Cost: $" /><br />
+          <input type="date" id="date" placeholder="publish date" /><br />
+          <input
+            type="number"
+            id="rate"
+            max="5"
+            min="1"
+            placeholder="rate"
+          /><br />
+          <input type="url" placeholder="image url enter" id="imgUrl" /><br />
+          <button
+            id="addModalSave"
+            style="
+              font-size: 20px;
+              height: 40px;
+              border-radius: 7px;
+              border: none;
+              color: white;
+              background-color: green;
+            "
+          >
+            Save
+          </button>
+        </form>
+      </div>
+      <!-- ==================================== -->
+
+      <div class="editModal">
+        <h1 style="text-align: center; margin-bottom: 20px; color: green">
+          Edit book
+        </h1>
+        <form class="editform">
+          <input
+            type="text"
+            id="editbookTitle"
+            placeholder="Book title"
+          /><br />
+          <input type="text" id="editauthor" placeholder="Author" /><br />
+          <select id="editcategory">
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option></select
+          ><br />
+          <input type="number" id="editprice" placeholder="Cost: $" /><br />
+          <input type="date" id="editdate" placeholder="publish date" /><br />
+          <input
+            type="number"
+            id="editrate"
+            max="5"
+            min="1"
+            placeholder="rate"
+          /><br />
+          <input
+            type="url"
+            placeholder="image url enter"
+            id="editimgUrl"
+          /><br />
+          <button
+            id="editModalSave"
+            style="
+              font-size: 20px;
+              height: 40px;
+              border-radius: 7px;
+              border: none;
+              color: white;
+              background-color: green;
+            "
+          >
+            Edit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

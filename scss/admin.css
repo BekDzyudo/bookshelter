@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 0px 50px;
+  min-width: 95%;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+}
+.container .logoBlog {
+  min-width: 20%;
+  background: linear-gradient(135deg, #5f00d8 0%, #b200f1 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+  min-height: 100vh;
+}
+.container .logoBlog .logoIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .logoBlog .logoIcon img {
+  margin-bottom: 40px;
+  width: 60px;
+  height: 60px;
+}
+.container .logoBlog .logoIcon .logoTitle {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: Lato;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.container .logoBlog .back {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.container .logoBlog .back h3 {
+  color: #fff;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.container .contentBlog {
+  width: 80%;
+}
+.container .contentBlog .header {
+  background-color: white;
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0px;
+  padding: 10px 10px 0px 10px;
+  box-shadow: 0px 5px 10px #ccc;
+}
+.container .contentBlog .header .contentTitle {
+  color: #000;
+  font-family: Lato;
+  font-size: 39px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.container .contentBlog .header .add {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-align: center;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 5px;
+  background: #10cd45;
+  width: 80.446px;
+  height: 40.501px;
+  flex-shrink: 0;
+  border: none;
+}
+.container .contentBlog .main {
+  margin-top: 60px;
+}
+.container .contentBlog .main #list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.container .contentBlog .main #list .item {
+  width: 90%;
+  border-radius: 10px 10px 10px 10px;
+  background: #ebebeb;
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  padding: 15px;
+  padding-bottom: 40px;
+  flex-shrink: 0;
+}
+.container .contentBlog .main #list .item .image {
+  width: 200px;
+  height: 180px;
+}
+.container .contentBlog .main #list .item .image img {
+  width: 100%;
+}
+.container .contentBlog .main #list .item .bookContent {
+  width: 100%;
+}
+.container .contentBlog .main #list .item .bookContent .booktitle {
+  color: #0f1111;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 141.176% */
+}
+.container .contentBlog .main #list .item .bookContent h3 {
+  color: #0f1111;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 141.176% */
+  margin-bottom: 20px;
+}
+.container .contentBlog .main #list .item .bookContent h3 .bookAuthor {
+  color: #007185;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 141.176% */
+}
+.container .contentBlog .main #list .item .bookContent .rate {
+  margin-bottom: 20px;
+}
+.container .contentBlog .main #list .item .bookContent .btnShow {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.container .contentBlog .main #list .item .bookContent .btnShow button {
+  width: 83px;
+  height: 38px;
+  padding: 6px 6px 6px 4px;
+  gap: 2px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #10cd45;
+  color: white;
+  border: none;
+  font-size: 18px;
+}
+.container .contentBlog .main #list .item .bookContent .btnShow button:nth-child(2) {
+  background-color: red;
+}
+.container .addModal {
+  animation: addModalAnimation 1s ease;
+  position: fixed;
+  top: 5%;
+  left: 35%;
+  background-color: #ebebeb;
+  padding: 15px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 2px 2px 10px black;
+  display: none;
+}
+.container .addModal .addform {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .addModal .addform .errorborder {
+  border: 2px solid red;
+}
+.container .addModal .addform input,
+.container .addModal .addform select {
+  height: 45px;
+  outline: none;
+  border-radius: 7px;
+  padding: 0px 10px;
+  font-size: 20px;
+}
+.container .addModal .addform input::-moz-placeholder, .container .addModal .addform select::-moz-placeholder {
+  padding-left: 10px;
+}
+.container .addModal .addform input::placeholder,
+.container .addModal .addform select::placeholder {
+  padding-left: 10px;
+}
+.container .editModal {
+  animation: addModalAnimation 1s ease;
+  position: fixed;
+  top: 10%;
+  left: 35%;
+  background-color: #ebebeb;
+  padding: 15px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 2px 2px 10px black;
+  display: none;
+}
+.container .editModal .editform {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .editModal .editform .errorborder {
+  border: 2px solid red;
+}
+.container .editModal .editform input,
+.container .editModal .editform select {
+  height: 45px;
+  outline: none;
+  border-radius: 7px;
+  padding: 0px 10px;
+  font-size: 20px;
+}
+.container .editModal .editform input::-moz-placeholder, .container .editModal .editform select::-moz-placeholder {
+  padding-left: 10px;
+}
+.container .editModal .editform input::placeholder,
+.container .editModal .editform select::placeholder {
+  padding-left: 10px;
+}
+
+@keyframes addModalAnimation {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=admin.css.map */
